@@ -328,13 +328,13 @@ def main():
         # "H" or "HELP" 입력 시 도움말 출력
         elif is_help_command(user_input) :
             print(get_help_message())
-
         # 변환 가능 알파벳인 경우
-        if is_validated_english_sentence(user_input) :
+        elif is_validated_english_sentence(user_input) :
             print(encoding_sentence(user_input))
         # 변환 가능 모스부호인 경우
         elif is_validated_morse_code(user_input) :
             print(decoding_sentence(user_input))
+        # 어떤 경우에도 속하지 않는 경우
         else : 
             print("Wrong Input")
 
